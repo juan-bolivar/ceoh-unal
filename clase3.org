@@ -311,7 +311,7 @@ is.number(a)
 
 #+RESULTS:
 #+BEGIN_SRC org
-Error in isnumber(a) : no se pudo encontrar la función "isnumber"
+Error in isnumber(a) : no se pudo encontrar la funciÃ³n "isnumber"
 #+END_SRC
 
 * Nombrar vectores y matrices
@@ -548,7 +548,7 @@ title(main = "volcano data: filled contour map")
 #+END_SRC
 
 #+RESULTS:
-[[file:test.png]]
+[[file:../test.png]]
 
 * Definicion de Heurisicas
   :PROPERTIES:
