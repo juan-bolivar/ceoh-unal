@@ -3,20 +3,17 @@
   :ID:       36f97be7-8eaf-4c6b-8fd1-7254a59640cf
   :END:
 
-
 * Prueba de R
   :PROPERTIES:
   :ID:       8d2d88e4-cf7b-4bf9-b811-7ebb6040a93b
   :END:
-  
 * Secuencias
   :PROPERTIES:
   :ID:       83ab285d-dc72-422b-8085-d1e49e02ea51
   :END:
   
 
-#+BEGIN_SRC R :results output org :exports both 
-
+#+BEGIN_SRC R :results output org :exports both
 seq(from=1,to=4,by=1)
 seq(stats::rnorm(20))
 seq(1,4,2)
@@ -79,7 +76,6 @@ A <- runif(3,0,10)
 | 7.88042935077101 |
 
 
-
 * Ordenamiento
   :PROPERTIES:
   :ID:       8ddc90b2-7213-47e9-89e5-b7ed2e4f6f0c
@@ -95,7 +91,7 @@ A <- runif(3,0,10)
    :ID:       b3d4e7f3-bcdc-4f47-a653-d6525078950b
    :END:
 
-  #+BEGIN_SRC R :results output org :exports results 
+  #+BEGIN_SRC R :results output org :exports both
 
 matrix(1:5,5,3)
 matrix(0,nrow=5,ncol=3)
@@ -133,7 +129,7 @@ matrix(runif(12),5,3)
    :ID:       c45f938a-33e2-4864-8290-805a326c490f
    :END:
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 B <- matrix(runif(12),4,3)
 
@@ -182,7 +178,7 @@ B
    :ID:       02397a75-790d-4750-832d-320486a7546a
    :END:
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 D <- matrix(runif(12),4,3)
 
@@ -207,7 +203,7 @@ B %*% C
   :END:
 
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 
 mean(B) 
@@ -242,7 +238,7 @@ colSums(C)
   :ID:       35429b6e-391f-4084-a985-92267b7430f0
   :END:
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 
 a <- 1
@@ -285,7 +281,7 @@ B!=0
   :ID:       3ccb9b6e-d9bc-44c8-92e2-c5f9b3f96418
   :END:
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 which(B>0.5)
 all(B>1)
@@ -306,7 +302,7 @@ any(B<0.1)
   :END:
 
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 a <- 1
 is.number(a)
@@ -368,7 +364,7 @@ x <- ifelse(1<2,1,2)
    :ID:       7ef7010e-cf94-4b1a-ab18-e6f1891f6667
    :END:
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 for (i in 1:10){
 
@@ -395,7 +391,7 @@ if(i >=5) break
    :ID:       8c1390d4-eae6-4086-984a-f10180184f89
    :END:
 
-#+BEGIN_SRC   R :session nuevo :results output org :exports results  
+#+BEGIN_SRC   R :session nuevo :results output org :exports both 
 
 
 i <- 1 
@@ -425,7 +421,7 @@ while (i<= 3) {
    :ID:       0be5afad-235f-4164-b311-b8f8fc3e99e2
    :END:
 
-#+BEGIN_SRC  R :session nuevo :results output org :exports results  
+#+BEGIN_SRC  R :session nuevo :results output org :exports both 
 
 i <- 1
 repeat{
@@ -452,7 +448,7 @@ repeat{
   :PROPERTIES:
   :ID:       3e005a29-69a2-4db1-84a4-71b75e2ae13b
   :END:
-  #+BEGIN_SRC R :session nuevo :results output org :exports results  
+  #+BEGIN_SRC R :session nuevo :results output org :exports both 
 
   fact <- function(n=4)
 
@@ -481,7 +477,7 @@ fact(5)
   
 
 
-  #+BEGIN_SRC R :session nuevo :results output org :exports results  
+  #+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 squares <- function(x){
 
@@ -502,7 +498,7 @@ squares <- function(x){
   :ID:       3861a209-2c15-4891-a71c-9cd8f0130e20
   :END:
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
 
 x <- seq(from = 0 , to = 20 , by =0.1)
 
@@ -524,7 +520,7 @@ plot(x,y,type = "l")
 
 
 
-#+BEGIN_SRC R :session nuevo :results output org :exports results  
+#+BEGIN_SRC R :session nuevo :results output org :exports both 
  
 
 
