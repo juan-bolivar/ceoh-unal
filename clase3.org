@@ -15,7 +15,7 @@
   :END:
   
 
-#+BEGIN_SRC R :results output org :exports results 
+#+BEGIN_SRC R :results output org :exports both 
 
 seq(from=1,to=4,by=1)
 seq(stats::rnorm(20))
