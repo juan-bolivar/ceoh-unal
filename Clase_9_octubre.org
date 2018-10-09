@@ -1,14 +1,4 @@
-* Prueba
 
-  #+BEGIN_SRC R
-
-  x <- c(0,1)
-  
-  #+END_SRC
-
-  #+RESULTS:
-  | 0 |
-  | 1 |
 
 * Conceptos claves del Tabu Searh
 
