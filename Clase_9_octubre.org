@@ -1,0 +1,120 @@
+* Prueba
+
+  #+BEGIN_SRC R
+
+  x <- c(0,1)
+  
+  #+END_SRC
+
+  #+RESULTS:
+  | 0 |
+  | 1 |
+
+* Conceptos claves del Tabu Searh
+
+  Posee:
+
+  - Memoria Adaptativa ( Memoria Selectiva , incluyendo olvido estrategico)
+  - Exploracion Sensible ( se concetra en buscar buenas caracteristicas de las soluciones)
+
+
+* Formas de elaborar la lista tabu
+  
+  1. Memoria Explicita: Memoriza en la lista tabu toda la solucion ya visitada , por ejemplo:
+
+     - Solucion Tabu = (3,2,1,3,4,6).
+
+  2. Memoria Atributiva
+
+     - En vez de memorizar toda la solucion , se memorizan atributos, es decir , caracteristicas importantes
+       de las soluciones ya visitadas , por ejemplo:
+
+       Atributo Tabu: (3,*,*,*,*,6)
+
+
+
+
+* Tipos de Memoria en la lista tabu
+
+  La lista tabu debe ser dinamica porque tras un cierto numero de iteraciones la busqueda esta en una region
+  distinta y las soluciones antiguas puede liberarse del estatus tabu.
+
+  |-------------+----------------+-------------------------------|
+  | Iteracion k | Iteracion k +1 |                               |
+  |-------------+----------------+-------------------------------|
+  | ******      | -------        | Se elmina ******              |
+  | ------      | +++++++        |                               |
+  | ++++++      | .......        |                               |
+  | ......      | '''''''        | Se agrega Nuevo Atributo Tabu |
+  |-------------+----------------+-------------------------------|
+
+** Ejemplo No lineal de Tabu Search
+
+   x *sin(x) 
+
+   Solucion Aleatoria Incial = \( (0,1,0,1,0,1,1,0)_{2} = 86_{10} \)
+
+   Se invierte los 8 Bits , uno a la vez y se evalua la funcion:
+
+   (0,1,0,1,0,1,1,0)
+     
+   | (1,1,0,1,0,1,1,0) | f(x) = |
+   | (0,0,0,1,0,1,1,0) |        |
+   | (0,1,1,1,0,1,1,0) |        |
+   | (0,1,0,0,0,1,1,0) |        |
+   | (0,1,0,1,1,1,1,0) |        |
+   | (0,1,0,1,0,0,1,0) |        |
+   | (0,1,0,1,0,1,0,0) |        |
+   | (0,1,0,1,0,1,1,1) |        |
+
+
+
+
+
+
+   
+   
+  
+
+* Ejemplo Combinatorio con Tabu Search
+
+  Encontrar un orden para secuenciar las tareas en la maquina de tal forma que se minimice el retraso total
+  en la ejecucion de las tareas.
+
+  \( f \sum_{j=1}^{n} w_{j}*max(0,c_{j}-d_{j})  = 1 \)
+
+  Datos
+
+  j = Tareas
+
+  p_{j} = Tiempo de procesamiento de la tarea
+  d_{j} = Dia de la finalizacion de la tarea
+  w_{j} = PEnalizacion por retardo en la finalizacion de la tarea
+
+  c_{j}  = Tiempo de finalizacion de la tarea j igual al tiempo de procesamiento
+           de la tarea j mas la suma de los tiemps de procesamiento de todas las tareas
+	   que se realizan antes de j.
+
+  se consideran 6 tareas para su secuenciacion 
+
+  p_{j}= (5,8,2,6,10,3)
+  d_{j}= (9,10,16,7,20,23)
+  w_{j}= 1
+
+
+  Solucion Inicial Aleatoria
+  
+  Tareas = (1,2,3,4,5,6)
+  
+  f = 39
+
+
+  Vecindarios : Intercambiar el orden de 2 tareas
+
+  Tamano del Vecindario 15
+
+
+  |   |   |   |   |
+  |   |   |   |   |
+
+
